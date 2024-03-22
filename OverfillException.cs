@@ -5,5 +5,7 @@ using System.Threading.Tasks;
 
 public class OverfillException : Exception
 {
-    public OverfillException() : base ("too much load") {}
+    public OverfillException(string container) : base ("Too much load in container " + container){
+        
+    }
 }

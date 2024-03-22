@@ -7,11 +7,12 @@ public abstract class Container
 {
     public static int nextSerialNumber = 1;
 
-    public int CargoMassInKg { get; set; }
-    public int HeightInCm { get; set; }
     public int WeightInKg { get; set; }
-    public int DepthInCm { get; set; }
     public int Capacity { get; set; }
+    public int HeightInCm { get; set; }
+    public int DepthInCm { get; set; }
+
+    public int CargoMassInKg { get; set; }
     public string SerialNumber { get; set; }
 
 
@@ -25,11 +26,12 @@ public abstract class Container
     }
 
     public void EmptyContainer() {
+        WeightInKg -= CargoMassInKg;
         CargoMassInKg = 0;
     }
     public void LoadContainerCargo(int massWeight){
         if (Capacity < massWeight) {
-            throw new OverfillException();
+            throw new OverfillException(SerialNumber);
         }
 
         WeightInKg += massWeight;

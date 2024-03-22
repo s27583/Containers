@@ -16,10 +16,16 @@ namespace Conteners
         }
 
         public void LoadContainerCargo(int massWeight, bool IsLoadDangerous) {
+
+
+            if (massWeight > Capacity) {
+                throw new OverfillException(SerialNumber);
+            }
+
             if (IsLoadDangerous) {
-                massWeight = (int)(massWeight * 0.5);
+                Capacity = (int)(Capacity * 0.5);
             } else {
-                massWeight = (int)(massWeight * 0.9);
+                Capacity = (int)(Capacity * 0.9);
             }
 
             if (WeightInKg + massWeight > Capacity) {
@@ -27,11 +33,13 @@ namespace Conteners
             } else {
                 WeightInKg += massWeight;
             }
+
         }
 
         public void NotifyDanger(string containerNumber)
         {
-            System.Console.WriteLine("dangerous situation in Liquid container" + containerNumber);
+            System.Console.WriteLine("dangerous situation in Liquid container " + containerNumber + " - cargo has not been loaded");
         }
+
     }
 }
