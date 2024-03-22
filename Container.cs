@@ -15,17 +15,19 @@ public abstract class Container
     public string SerialNumber { get; set; }
 
 
-    public Container(int massInKg, int heightInCm, int rWeightInKg, int depthInCm, int maxCapacity)
+    public Container(int massInKg, int heightInCm, int weightInKg, int depthInCm, int maxCapacity)
     {
         MassInKg = massInKg;
         HeightInCm = heightInCm;
-        WeightInKg = WeightInKg;
+        WeightInKg = weightInKg;
         DepthInCm = depthInCm;
         MaxCapacity = maxCapacity;
         SerialNumber = $"KON-C-{nextSerialNumber}";
     }
 
-    public abstract void EmptyContainer();
+    public void EmptyContainer() {
+        MassInKg = 0;
+    }
     public void LoadContainer(int massWeight){
         if (MaxCapacity < MassInKg) {
             throw new OverfillException();
