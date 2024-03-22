@@ -33,10 +33,10 @@ public abstract class Container
         if (Capacity < massWeight) {
             throw new OverfillException(SerialNumber);
         }
-
         WeightInKg += massWeight;
-        
     }
+
+    public abstract void PrintContainerInfo();
 
     
 }

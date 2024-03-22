@@ -36,6 +36,15 @@ namespace Conteners
 
         }
 
+        public override void PrintContainerInfo() 
+        {
+            System.Console.WriteLine("\ncontainer serial number = " + SerialNumber);
+            System.Console.WriteLine("container weight in kg = " + WeightInKg);
+            System.Console.WriteLine("container capacity = " + Capacity);
+            System.Console.WriteLine("container height in cm = " + HeightInCm);
+            System.Console.WriteLine("container depth in cm = " + DepthInCm);
+        }
+
         public void NotifyDanger(string containerNumber)
         {
             System.Console.WriteLine("dangerous situation in Liquid container " + containerNumber + " - cargo has not been loaded");

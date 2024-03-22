@@ -20,6 +20,16 @@ namespace Conteners
             NotifyDanger(SerialNumber);
         }
 
+        public override void PrintContainerInfo() 
+        {
+            System.Console.WriteLine("\ncontainer serial number = " + SerialNumber);
+            System.Console.WriteLine("container weight in kg = " + WeightInKg);
+            System.Console.WriteLine("container capacity = " + Capacity);
+            System.Console.WriteLine("container height in cm = " + HeightInCm);
+            System.Console.WriteLine("container depth in cm = " + DepthInCm);
+            System.Console.WriteLine("container pressure in atm = " + PressureInAtm);
+        }
+
         public void NotifyDanger(string containerNumber)
         {
             System.Console.WriteLine("dangerous situation in Gas container " + containerNumber + " - 5% of container's load is still in container");

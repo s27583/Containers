@@ -36,5 +36,16 @@ namespace Conteners
             WeightInKg += massWeight;
         }
 
+        public override void PrintContainerInfo() 
+        {
+            System.Console.WriteLine("\ncontainer serial number = " + SerialNumber);
+            System.Console.WriteLine("container weight in kg = " + WeightInKg);
+            System.Console.WriteLine("container capacity = " + Capacity);
+            System.Console.WriteLine("container height in cm = " + HeightInCm);
+            System.Console.WriteLine("container depth in cm = " + DepthInCm);
+            System.Console.WriteLine("container product type = " + ProductType);
+            System.Console.WriteLine("container temperature = " + Temperature);
+        }
+
     }
 }
