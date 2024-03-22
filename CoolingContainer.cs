@@ -32,7 +32,7 @@ namespace Conteners
                 System.Console.WriteLine("product temperature is too high - container " + SerialNumber + " has not been loaded");
                 return;
             }
-
+            CargoMassInKg = massWeight;
             WeightInKg += massWeight;
         }
 
@@ -46,6 +46,7 @@ namespace Conteners
             System.Console.WriteLine("container product type = " + ProductType);
             System.Console.WriteLine("container temperature = " + Temperature);
         }
+
 
     }
 }

@@ -29,13 +29,13 @@ namespace Conteners
         {
             if (containerCounter >= MaxContainers)
             {
-                System.Console.WriteLine("too many containers - container has not been added");
+                System.Console.WriteLine("too many containers - container " + container.SerialNumber + " has not been added");
                 return;
             }
 
             if (shipLoadWeight + container.WeightInKg > MaxFullWeightInTones * 1000)
             {
-                System.Console.WriteLine("ship is full - container has not been added");
+                System.Console.WriteLine("too heavy container - container " + container.SerialNumber + " has not been added");
                 return;
             }
 
@@ -64,12 +64,16 @@ namespace Conteners
             System.Console.WriteLine("ship speed in knots = " + SpeedInKnots);
             System.Console.WriteLine("ship's max containers = " + MaxContainers);
             System.Console.WriteLine("ship max weight in tones = " + MaxFullWeightInTones * 1000);
-            System.Console.WriteLine("ship's actual load weight in kg = " + shipLoadWeight);
+            System.Console.WriteLine("ship's current load weight in kg = " + shipLoadWeight);
             System.Console.WriteLine("amount of containers on ship = " + containerCounter + "\n");
-            System.Console.WriteLine("ship's load:");
-            foreach (var c in Containers)
-            {
-                c.PrintContainerInfo();
+            if (Containers.Count != 0) {
+                System.Console.WriteLine("ship's load:");
+                foreach (var c in Containers)
+                {
+                    System.Console.WriteLine(c.SerialNumber + ", " + c.WeightInKg + "kg");
+                }
+            } else {
+                System.Console.WriteLine("this ship doesn't have any containers");
             }
             System.Console.WriteLine();
         }
@@ -89,7 +93,8 @@ namespace Conteners
         {
             if (this.Containers.Contains(container)) {
                 this.Containers.Remove(container);
-                ship.Containers.Add(container);
+                ship.LoadContainer(container);
+                containerCounter--;
             } else {
                 System.Console.WriteLine("ship doesn't have this container loaded on so it can't be transfered");
             }

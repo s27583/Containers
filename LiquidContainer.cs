@@ -31,6 +31,7 @@ namespace Conteners
             if (WeightInKg + massWeight > Capacity) {
                 NotifyDanger(SerialNumber);
             } else {
+                CargoMassInKg = massWeight;
                 WeightInKg += massWeight;
             }
 

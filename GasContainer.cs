@@ -8,15 +8,18 @@ namespace Conteners
     public class GasContainer : Container, IHazardNotifier
     {
         public double PressureInAtm { get; set; }
+        public int basicWeightInKg { get; set; }
         public GasContainer(int weightInKg, int capacity, int heightInCm, int depthInCm, double pressureInAtm)
          : base(weightInKg, capacity, heightInCm, depthInCm)
         {
             PressureInAtm = pressureInAtm;
+            basicWeightInKg = WeightInKg;
             SerialNumber = $"KON-G-{nextSerialNumber++}";
         }
 
         public void EmptyContainer() {
-            WeightInKg = (int)(WeightInKg* 0.05);
+            
+            WeightInKg = (int)(WeightInKg* 0.05) + basicWeightInKg;
             NotifyDanger(SerialNumber);
         }
 
