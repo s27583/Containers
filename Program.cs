@@ -5,12 +5,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        LiquidContainer container0 = new(5000, 500, 500, 500, 50);
-        LiquidContainer container1 = new(5000, 500, 500, 500, 50);
-        LiquidContainer container2 = new(5000, 500, 500, 500, 50);
-        CoolingContainer container3 = new(5000, 500, 500, 500, 50);
-        LiquidContainer container4 = new(5000, 500, 500, 500, 50);
-        CoolingContainer container5 = new(5000, 500, 500, 500, 50);
+        LiquidContainer container0 = new(500, 5000, 500, 50);
+        LiquidContainer container1 = new(500, 5000, 500, 50);
+        LiquidContainer container2 = new(500, 5000, 500, 50);
+        CoolingContainer container3 = new(500, 500, 500, 50);
+        LiquidContainer container4 = new(500, 5000, 500, 50);
+        CoolingContainer container5 = new(500, 500, 500, 50);
+
+        container0.LoadContainerCargo(40000, true);
 
         Ship ship = new(50,50,1000);
 

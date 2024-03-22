@@ -7,8 +7,8 @@ namespace Conteners
 {
     public class CoolingContainer : Container
     {
-        public CoolingContainer(int massInKg, int heightInCm, int rWeightInKg, int depthInCm, int maxCapacity)
-         : base(massInKg, heightInCm, rWeightInKg, depthInCm, maxCapacity)
+        public CoolingContainer(int heightInCm, int weightInKg, int depthInCm, int capacity)
+         : base(weightInKg, capacity, heightInCm, depthInCm)
         {
             SerialNumber = $"KON-C-{nextSerialNumber++}";
         }

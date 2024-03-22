@@ -7,31 +7,32 @@ public abstract class Container
 {
     public static int nextSerialNumber = 1;
 
-    public int MassInKg { get; set; }
+    public int CargoMassInKg { get; set; }
     public int HeightInCm { get; set; }
     public int WeightInKg { get; set; }
     public int DepthInCm { get; set; }
-    public int MaxCapacity { get; set; }
+    public int Capacity { get; set; }
     public string SerialNumber { get; set; }
 
 
-    public Container(int massInKg, int heightInCm, int weightInKg, int depthInCm, int maxCapacity)
+    public Container(int weightInKg, int capacity, int heightInCm, int depthInCm)
     {
-        MassInKg = massInKg;
         HeightInCm = heightInCm;
         WeightInKg = weightInKg;
         DepthInCm = depthInCm;
-        MaxCapacity = maxCapacity;
+        Capacity = capacity;
         SerialNumber = $"KON-C-{nextSerialNumber}";
     }
 
     public void EmptyContainer() {
-        MassInKg = 0;
+        CargoMassInKg = 0;
     }
-    public void LoadContainer(int massWeight){
-        if (MaxCapacity < MassInKg) {
+    public void LoadContainerCargo(int massWeight){
+        if (Capacity < massWeight) {
             throw new OverfillException();
         }
+
+        WeightInKg += massWeight;
         
     }
 
