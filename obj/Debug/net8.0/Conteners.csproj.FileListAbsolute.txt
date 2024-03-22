@@ -1,0 +1,15 @@
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.AssemblyInfoInputs.cache
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.AssemblyInfo.cs
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.csproj.CoreCompileInputs.cache
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.sourcelink.json
+D:\ProjektyC#\Nowy folder\Conteners\bin\Debug\net8.0\Conteners.exe
+D:\ProjektyC#\Nowy folder\Conteners\bin\Debug\net8.0\Conteners.deps.json
+D:\ProjektyC#\Nowy folder\Conteners\bin\Debug\net8.0\Conteners.runtimeconfig.json
+D:\ProjektyC#\Nowy folder\Conteners\bin\Debug\net8.0\Conteners.dll
+D:\ProjektyC#\Nowy folder\Conteners\bin\Debug\net8.0\Conteners.pdb
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.dll
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\refint\Conteners.dll
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.pdb
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\Conteners.genruntimeconfig.cache
+D:\ProjektyC#\Nowy folder\Conteners\obj\Debug\net8.0\ref\Conteners.dll
